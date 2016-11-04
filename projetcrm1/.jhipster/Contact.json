@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stage",
+            "otherEntityName": "stage",
+            "otherEntityRelationshipName": "contact"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "entprise",
+            "otherEntityName": "entreprise",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "contNom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contPrenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contMail",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161031215552",
+    "entityTableName": "contact",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

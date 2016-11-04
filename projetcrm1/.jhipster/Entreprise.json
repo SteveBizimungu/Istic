@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stage",
+            "otherEntityName": "stage",
+            "otherEntityRelationshipName": "entreprise"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "contact",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "entprise"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "entLibele",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "entVille",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "entRue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "entCodeDep",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20161031215551",
+    "entityTableName": "entreprise",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

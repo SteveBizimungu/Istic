@@ -1,0 +1,12 @@
+com/projet/crm/web/rest/StageResourceIntTest.class
+com/projet/crm/web/rest/ContactResourceIntTest.class
+com/projet/crm/web/rest/PeriodeStageResourceIntTest.class
+com/projet/crm/web/rest/AuditResourceIntTest.class
+com/projet/crm/web/rest/EnseignantResourceIntTest.class
+com/projet/crm/security/SecurityUtilsUnitTest.class
+com/projet/crm/web/rest/AccountResourceIntTest.class
+com/projet/crm/web/rest/EtudiantResourceIntTest.class
+com/projet/crm/web/rest/TestUtil.class
+com/projet/crm/service/UserServiceIntTest.class
+com/projet/crm/web/rest/UserResourceIntTest.class
+com/projet/crm/web/rest/EntrepriseResourceIntTest.class

@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stage",
+            "otherEntityName": "stage",
+            "otherEntityRelationshipName": "periode"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "perDebut",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "perFin",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20161031215555",
+    "entityTableName": "periode_stage",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

@@ -1,0 +1,44 @@
+
+
+
+
+        <div>
+            <form name="myForm">
+                <label for="repertoireetudiant"> Repeat select: </label>
+                <select name="repertoireetudiant" id="repertoireetudiant" ng-model="data.model">
+                    <option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
+                </select>
+            </form>
+            <hr>
+
+        </div>
+
+
+
+
+
+
+<div>
+    <h2><span>Etudiant</span> {{vm.repetudiant.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Etu Name</span></dt>
+        <dd>
+            <span>{{vm.repetudiant.etuName}}</span>
+        </dd>
+        <dt><span>Etu Prenom</span></dt>
+        <dd>
+            <span>{{vm.repetudiant.etuPrenom}}</span>
+        </dd>
+
+        <dt><span>Etu Mail</span></dt>
+        <dd>
+            <span>{{vm.repetudiant.etuMail}}</span>
+        </dd>
+    </dl>
+    <button type="button" ui-sref="repetudiant-detail.edit({id:vm.etudiant.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-envelope"></span>
+        <span class="hidden-xs hidden-sm"> mail</span>
+    </button>
+</div>

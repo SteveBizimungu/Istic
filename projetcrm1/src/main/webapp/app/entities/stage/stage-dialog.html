@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myStageLabel">Create or edit a Stage</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.stage.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.stage.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_stageAnnee">Stage Annee</label>
+                <div class="input-group">
+                    <input id="field_stageAnnee" type="text" class="form-control" name="stageAnnee" uib-datepicker-popup="{{dateformat}}" ng-model="vm.stage.stageAnnee" is-open="vm.datePickerOpenStatus.stageAnnee"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('stageAnnee')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_stageSujet">Stage Sujet</label>
+            <input type="text" class="form-control" name="stageSujet" id="field_stageSujet"
+                    ng-model="vm.stage.stageSujet"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_etudiant">Etudiant</label>
+            <select class="form-control" id="field_etudiant" name="etudiant" ng-model="vm.stage.etudiantId" ng-options="etudiant.id as etudiant.id for etudiant in vm.etudiants"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_periode">Periode</label>
+            <select class="form-control" id="field_periode" name="periode" ng-model="vm.stage.periodeId" ng-options="periodeStage.id as periodeStage.id for periodeStage in vm.periodestages"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_enseignant">Enseignant</label>
+            <select class="form-control" id="field_enseignant" name="enseignant" ng-model="vm.stage.enseignantId" ng-options="enseignant.id as enseignant.id for enseignant in vm.enseignants"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_entreprise">Entreprise</label>
+            <select class="form-control" id="field_entreprise" name="entreprise" ng-model="vm.stage.entrepriseId" ng-options="entreprise.id as entreprise.id for entreprise in vm.entreprises"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_contact">Contact</label>
+            <select class="form-control" id="field_contact" name="contact" ng-model="vm.stage.contactId" ng-options="contact.id as contact.id for contact in vm.contacts"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

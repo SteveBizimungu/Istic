@@ -1,0 +1,13 @@
+
+<div>
+    <form name="myForm">
+        <label for="repertoireetudiant"> Repeat select: </label>
+        <select name="repertoireetudiant" id="repertoireetudiant" ng-model="data.model">
+            <option ng-repeat="option in PeriodeStage.periodeStages" value="{{option.id}}">{{option.id}}</option>
+        </select>
+    </form>
+    <hr>
+
+</div>
+
+

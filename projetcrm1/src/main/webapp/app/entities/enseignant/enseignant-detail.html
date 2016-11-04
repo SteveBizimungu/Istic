@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span>Enseignant</span> {{vm.enseignant.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Ens Name</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensName}}</span>
+        </dd>
+        <dt><span>Ens Prenom</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensPrenom}}</span>
+        </dd>
+        <dt><span>Ens Ville</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensVille}}</span>
+        </dd>
+        <dt><span>Ens Rue</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensRue}}</span>
+        </dd>
+        <dt><span>Ens Code Dep</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensCodeDep}}</span>
+        </dd>
+        <dt><span>Ens Tel</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensTel}}</span>
+        </dd>
+        <dt><span>Ens Mail</span></dt>
+        <dd>
+            <span>{{vm.enseignant.ensMail}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="enseignant-detail.edit({id:vm.enseignant.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

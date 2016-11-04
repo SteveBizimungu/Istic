@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stage",
+            "otherEntityName": "stage",
+            "otherEntityRelationshipName": "etudiant"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "etuName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "etuPrenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "etuVille",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "etuRue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "etuCodeDep",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "etuPremiereInscription",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "etuAnneeCourante",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "etuMail",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161031215553",
+    "entityTableName": "etudiant",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

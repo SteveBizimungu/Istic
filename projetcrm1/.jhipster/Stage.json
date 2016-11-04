@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "etudiant",
+            "otherEntityName": "etudiant",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "periode",
+            "otherEntityName": "periodeStage",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "enseignant",
+            "otherEntityName": "enseignant",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "entreprise",
+            "otherEntityName": "entreprise",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "contact",
+            "otherEntityName": "contact",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "stageAnnee",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "stageSujet",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161031215550",
+    "entityTableName": "stage",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

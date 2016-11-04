@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stage",
+            "otherEntityName": "stage",
+            "otherEntityRelationshipName": "enseignant"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "ensName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ensPrenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ensVille",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ensRue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ensCodeDep",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ensTel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ensMail",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161031215554",
+    "entityTableName": "enseignant",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

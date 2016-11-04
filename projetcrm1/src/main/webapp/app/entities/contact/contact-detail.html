@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Contact</span> {{vm.contact.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Cont Nom</span></dt>
+        <dd>
+            <span>{{vm.contact.contNom}}</span>
+        </dd>
+        <dt><span>Cont Prenom</span></dt>
+        <dd>
+            <span>{{vm.contact.contPrenom}}</span>
+        </dd>
+        <dt><span>Cont Mail</span></dt>
+        <dd>
+            <span>{{vm.contact.contMail}}</span>
+        </dd>
+        <dt><span>Entprise</span></dt>
+        <dd>
+            <a ui-sref="entreprise-detail({id:vm.contact.entpriseId})">{{vm.contact.entpriseId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="contact-detail.edit({id:vm.contact.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>
