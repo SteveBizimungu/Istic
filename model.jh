@@ -1,0 +1,58 @@
+entity Stage {
+
+    stageAnnee LocalDate
+    stageSujet String
+    stageSujet String
+}
+
+entity Entreprise {
+
+    entLibele String
+    entVille String
+    entRue String
+    entCodeDep Integer
+}
+
+entity Contact {
+    contNom String
+    contPrenom String
+}
+
+entity Etudiant {
+
+    etuName String
+    etuPrenom String
+    etuVille String
+    etuRue String
+    etuCodeDep Integer
+    etuPremiereInscription LocalDate
+    etuAnneeCourante LocalDate
+    etuMail String
+}
+
+entity Enseignant {
+
+    ensName String
+    ensPrenom String
+    ensVille String
+
+    ensRue String
+    ensCodeDep Integer
+    ensTel String
+    ensMail String
+}
+
+entity PeriodeStage {
+
+    perDebut ZonedDateTime
+    perFin ZonedDateTime
+}
+
+relationship OneToMany {
+  Stage{etudiant} to Etudiant  ,
+   Stage{periode} to PeriodeStage ,
+    Stage{enseignant} to Enseignant ,
+    Stage {entreprise} to Entreprise,
+    Contact {entprise} to Entreprise ,
+    Stage{contact} to contact
+}

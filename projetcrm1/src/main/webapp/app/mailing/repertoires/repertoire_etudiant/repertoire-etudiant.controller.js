@@ -5,12 +5,12 @@
     'use strict';
 
     angular
-        .module('projetcrmApp')
+        .module('projetcrm1App')
         .controller('RepertoireEtudiantController', RepertoireEtudiantController);
 
     RepertoireEtudiantController.$inject = ['$scope', '$state', 'RepertoireEtudiant','previousState'];
 
-    function RepEtudiantController ($scope, $state, RepertoireEtudiant) {
+    function RepertoireEtudiantController ($scope, $state, RepertoireEtudiant) {
         var vm = this;
         vm.previousState = previousState.name;
         vm.etudiants = [];

@@ -11,5 +11,7 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
+/*    @Querry(select * from etudiant join stage where periode id = :periodeid)
+    public List<Etudiant> getbyPeriode(@)*/
 
 }

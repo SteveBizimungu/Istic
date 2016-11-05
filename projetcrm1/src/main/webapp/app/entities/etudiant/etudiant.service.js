@@ -40,11 +40,12 @@
                     return angular.toJson(copy);
                 }
             },
+            /*
             'getPeriode':{
                 method:'GET',
                 transformRequest
 
-            }
+            }*/
         });
     }
 })();

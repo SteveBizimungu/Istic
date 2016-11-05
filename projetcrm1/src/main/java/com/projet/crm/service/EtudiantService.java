@@ -20,7 +20,7 @@ public interface EtudiantService {
 
     /**
      *  Get all the etudiants.
-     *  
+     *
      *  @return the list of entities
      */
     List<EtudiantDTO> findAll();
@@ -32,6 +32,15 @@ public interface EtudiantService {
      *  @return the entity
      */
     EtudiantDTO findOne(Long id);
+
+
+    /**
+     * Get the id of a periode
+     * @param id the id of a given periode
+     * @return the list of etudiants for that periode
+     */
+    /*
+    List<EtudiantDTO> findByPeriode(Long id);*/
 
     /**
      *  Delete the "id" etudiant.

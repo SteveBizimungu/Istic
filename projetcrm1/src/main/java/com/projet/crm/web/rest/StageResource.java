@@ -135,11 +135,11 @@ public class StageResource {
         stageService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("stage", id.toString())).build();
     }
-
+/*
 @RequestMapping(value="/stages/repertoire/etudiant/{periode}")
     public ResponseEntity<EtudiantDTO>getEtudiantPeriode(@PathVariable Long periode){
     log.debug("REST request to load etudiant contact liste per periode : {}", periode);
     StageService.findEtundiantPerPeriode(periode);
     return
-    }
+    }*/
 }

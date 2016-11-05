@@ -5,7 +5,7 @@
     'use strict';
 
     angular
-        .module('projetcrmApp')
+        .module('projetcrm1App')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];

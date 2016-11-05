@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public class EtudiantResource {
 
     private final Logger log = LoggerFactory.getLogger(EtudiantResource.class);
-        
+
     @Inject
     private EtudiantService etudiantService;
 
@@ -127,5 +127,15 @@ public class EtudiantResource {
         etudiantService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("etudiant", id.toString())).build();
     }
-
+/*
+    public ResponseEntity<EtudiantDTO>getEtudiantbyPeriode(@PathVariable Long idPeriode){
+        log.debug("REST request to get Etudiant : {}", id);
+        EtudiantDTO etudiantDTO = etudiantService.findbyPeriode(id);
+        return Optional.ofNullable(etudiantDTO)
+            .map(result -> new ResponseEntity<>(
+                result,
+                HttpStatus.OK))
+            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+*/
 }

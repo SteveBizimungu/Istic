@@ -1,0 +1,83 @@
+entity Stage{
+
+    stageAnnee LocalDate
+    stageSujet String
+   
+}
+
+entity Entreprise {
+
+    entLibele String
+    entVille String
+    entRue String
+    entCodeDep Integer
+}
+
+entity Contact {
+    contNom String
+    contPrenom String
+    contMail String
+}
+
+entity Etudiant {
+
+    etuName String
+    etuPrenom String
+    etuVille String
+    etuRue String
+    etuCodeDep Integer
+    etuPremiereInscription LocalDate
+    etuAnneeCourante LocalDate
+    etuMail String
+}
+
+entity Enseignant {
+
+    ensName String
+    ensPrenom String
+    ensVille String
+
+    ensRue String
+    ensCodeDep Integer
+    ensTel String
+    ensMail String
+}
+
+entity PeriodeStage {
+
+    perDebut ZonedDateTime
+    perFin ZonedDateTime
+    perAbreg String 
+    perEcart Integer 
+}
+
+relationship OneToMany {
+  Etudiant  to  Stage{etudiant},
+  PeriodeStage to Stage{periode}  ,
+   Enseignant to Stage{enseignant}  ,
+   Entreprise to Stage {entreprise}  ,
+   Entreprise to Contact {entprise},
+    Contact to Stage {contact}
+}
+
+
+
+
+
+
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+
+// Set pagination options
+
+paginate Stage with pagination
+		
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix

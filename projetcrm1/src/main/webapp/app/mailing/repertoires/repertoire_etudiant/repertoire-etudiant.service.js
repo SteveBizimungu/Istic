@@ -5,7 +5,7 @@
 (function() {
     'use strict';
     angular
-        .module('projetcrmApp')
+        .module('projetcrm1App')
         .factory('RepEtudiant', RepEtudiant);
 
     RepEtudiant.$inject = ['$resource', 'DateUtils'];
